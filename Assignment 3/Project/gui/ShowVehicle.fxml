@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="MyPane" prefHeight="800.0" prefWidth="1050.0" stylesheets="@../styleCSS/HomePage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ShowVehiclesAndDelete">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1050.0">
+         <children>
+            <Button fx:id="btnBack" layoutX="27.0" layoutY="750.0" mnemonicParsing="false" onMouseClicked="#backClick" prefHeight="30.0" prefWidth="160.0" style="-fx-border-radius: 3px; -fx-border-width: 0.7; -fx-border-color: BLACK;" text="Back">
+               <effect>
+                  <InnerShadow blurType="ONE_PASS_BOX" color="#7789999a" height="255.0" radius="127.0" width="255.0">
+                     <input>
+                        <InnerShadow choke="0.57" color="#ff000000" />
+                     </input>
+                  </InnerShadow>
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="1050.0" style="-fx-background-color: LIGHTSLATEGRAY;">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#faf9f9" height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <children>
+                  <Label layoutX="14.0" layoutY="21.0" text="System Operations -&gt; Show Vehicles" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox alignment="CENTER" layoutX="1.0" layoutY="76.0" prefHeight="75.0" prefWidth="1050.0">
+               <children>
+                  <Label text="Vehicles">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Button fx:id="btnDelete" layoutX="865.0" layoutY="750.0" mnemonicParsing="false" onMouseClicked="#deleteVehicleClick" prefHeight="30.0" prefWidth="160.0" style="-fx-border-radius: 3px; -fx-border-width: 0.7; -fx-border-color: BLACK;" text="Remove">
+               <effect>
+                  <InnerShadow blurType="ONE_PASS_BOX" color="#7789999a" height="255.0" radius="127.0" width="255.0">
+                     <input>
+                        <InnerShadow choke="0.57" color="#ff000000" />
+                     </input>
+                  </InnerShadow>
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Pane layoutX="-2.0" layoutY="149.0" prefHeight="565.0" prefWidth="1050.0">
+               <children>
+                  <TableView fx:id="tableVehicles" layoutX="32.0" layoutY="66.0" prefHeight="420.0" prefWidth="992.0">
+                    <columns>
+                        <TableColumn fx:id="clmnFirstName" prefWidth="142.40002059936523" text="FirstName" />
+                        <TableColumn fx:id="clmnLastName" prefWidth="161.6000518798828" text="LastName" />
+                      <TableColumn fx:id="clmnCustomerID" prefWidth="190.4000244140625" text="CustomerID" />
+                      <TableColumn fx:id="clmnLicenseNumber" prefWidth="162.4000244140625" text="LicenseNumber" />
+                        <TableColumn fx:id="clmnVType" minWidth="0.0" prefWidth="179.199951171875" text="VehicleType" />
+                        <TableColumn fx:id="clmnFuelType" prefWidth="168.00006103515625" text="FuelType" />
+                    </columns>
+                  </TableView>
+                  <Label fx:id="lbl1" layoutX="30.0" layoutY="12.0" prefHeight="32.0" prefWidth="676.0" text="Choose a vehicle to remove:" underline="true">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblError" alignment="TOP_LEFT" layoutX="32.0" layoutY="506.0" prefHeight="60.0" prefWidth="742.0" textFill="RED" />
+               </children>
+            </Pane>
+            <HBox layoutX="985.0" layoutY="5.0" prefHeight="24.0" prefWidth="27.0">
+               <children>
+                  <Button fx:id="Minus" mnemonicParsing="false" onAction="#minimize" styleClass="minimizeExitBtn">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Minus.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" contrast="-1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="X" mnemonicParsing="false" onAction="#exit" styleClass="minimizeExitBtn">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/X.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" contrast="1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

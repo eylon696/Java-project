@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="MyPane" prefHeight="800.0" prefWidth="1050.0" stylesheets="@../styleCSS/HomePage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ShowHomeHeatingFuelPurchasesControllerClient">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1050.0">
+         <children>
+            <Button fx:id="btnBack" layoutX="27.0" layoutY="750.0" mnemonicParsing="false" onMouseClicked="#backFunction" prefHeight="30.0" prefWidth="160.0" style="-fx-border-radius: 3px; -fx-border-width: 0.7; -fx-border-color: BLACK;" text="Back">
+               <effect>
+                  <InnerShadow blurType="ONE_PASS_BOX" color="#7789999a" height="255.0" radius="127.0" width="255.0">
+                     <input>
+                        <InnerShadow choke="0.57" color="#ff000000" />
+                     </input>
+                  </InnerShadow>
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="1050.0" style="-fx-background-color: LIGHTSLATEGRAY;">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#faf9f9" height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <children>
+                  <Label layoutX="14.0" layoutY="21.0" text="System Operations -&gt; Show Home Heating Fuel Purchases" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox alignment="CENTER" layoutX="1.0" layoutY="76.0" prefHeight="75.0" prefWidth="1050.0">
+               <children>
+                  <Label text="Home Heating Fuel Purchases">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Pane layoutX="-2.0" layoutY="149.0" prefHeight="568.0" prefWidth="1050.0">
+               <children>
+                  <TableView fx:id="tablePurchases" layoutX="8.0" layoutY="2.0" prefHeight="553.0" prefWidth="1034.0">
+                    <columns>
+                      <TableColumn fx:id="clmnPurchaseID" prefWidth="79.99994087219238" text="Purchase ID" />
+                      <TableColumn fx:id="clmnCustomerID" prefWidth="104.80001831054688" text="Customer ID" />
+                        <TableColumn fx:id="clmnPurchaseDate" minWidth="0.0" prefWidth="118.39997863769531" text="Purchase Date" />
+                        <TableColumn fx:id="clmnQuantity" prefWidth="72.0" text="Quantity" />
+                        <TableColumn fx:id="clmnDeliverTo" prefWidth="144.0" text="Deliver To" />
+                        <TableColumn fx:id="clmnDeliveryType" prefWidth="144.00006103515625" text="Delivery Type" />
+                        <TableColumn fx:id="clmnPrice" prefWidth="116.79998779296875" text="Price" />
+                        <TableColumn fx:id="clmnPayment" prefWidth="136.8001708984375" text="Payment" />
+                        <TableColumn fx:id="clmnDelivered" prefWidth="119.20001220703125" text="Delivered" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <HBox layoutX="985.0" layoutY="5.0" prefHeight="24.0" prefWidth="27.0">
+               <children>
+                  <Button fx:id="Minus" mnemonicParsing="false" onAction="#minimize" styleClass="minimizeExitBtn">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Minus.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" contrast="-1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="X" mnemonicParsing="false" onAction="#exit" styleClass="minimizeExitBtn">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/X.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" contrast="1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

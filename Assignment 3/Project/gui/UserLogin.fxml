@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import validationtextfield.*?>
+
+<AnchorPane fx:id="MyAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../styleCSS/UserLogin.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.UserLoginController">
+   <children>
+      <Pane fx:id="MyPane" layoutX="400.0" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #FFF;">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="33.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/FuelIconGrey.png" />
+               </image>
+               <effect>
+                  <ColorAdjust contrast="-1.0" hue="-1.0" saturation="-1.0" />
+               </effect>
+            </ImageView>
+            <Label layoutX="31.0" layoutY="165.0" text="Welcome Back" textFill="#545454">
+               <font>
+                  <Font name="Ebrima Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="194.0" text="Sign in to continue" textFill="#a3a3a3">
+               <font>
+                  <Font name="Ebrima Bold" size="16.0" />
+               </font>
+            </Label>
+            <NumberTextFieldOnly fx:id="ID" layoutX="56.0" layoutY="268.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="Username" style="-fx-background-color: #FFF; -fx-border-color: e0e0e0; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </NumberTextFieldOnly>
+            <PasswordField fx:id="Password" layoutX="56.0" layoutY="339.0" prefHeight="32.0" prefWidth="280.0" promptText="Password" style="-fx-background-color: #FFF; -fx-border-color: e0e0e0; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="ForgotPassword" layoutX="208.0" layoutY="371.0" mnemonicParsing="false" onAction="#openForgotPasswordForm" style="-fx-background-color: transparent;">
+               <graphic>
+                  <Label styleClass="forgetBtn" text="Forgot Password?" textFill="#a3a3a3">
+                     <font>
+                        <Font name="Ebrima" size="16.0" />
+                     </font>
+                  </Label>
+               </graphic>
+            </Button>
+            <Button fx:id="Login" layoutX="50.0" layoutY="425.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Login" prefHeight="50.0" prefWidth="300.0" styleClass="loginBtn" text="Login">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="369.0" layoutY="1.0" mnemonicParsing="false" onAction="#exit" styleClass="minimizeExitBtn">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/X.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+            </Button>
+            <Button layoutX="343.0" layoutY="1.0" mnemonicParsing="false" onAction="#minimize" styleClass="minimizeExitBtn">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Minus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="50.0" layoutY="536.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#goToFastFuelingForm" prefHeight="50.0" prefWidth="300.0" styleClass="loginBtn" text="Fast Fueling">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtLiscensePlateNumber" layoutX="50.0" layoutY="490.0" onKeyTyped="#limit" prefHeight="33.0" prefWidth="300.0" promptText="License Plate Number">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #2196f3;">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="151.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Fuel Icon.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" contrast="1.0" />
+               </effect>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label text="Welcome To" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="My Fuel System" textFill="WHITE">
+               <font>
+                  <Font name="Impact" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

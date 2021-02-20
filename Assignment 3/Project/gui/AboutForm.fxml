@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MyAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1050.0" stylesheets="@../styleCSS/HomePage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.AboutController">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="1050.0" style="-fx-background-color: LIGHTSLATEGRAY;">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" color="#faf9f9" height="10.0" radius="4.5" width="10.0" />
+         </effect>
+         <children>
+            <Label layoutX="14.0" layoutY="21.0" text="About" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <VBox alignment="CENTER" layoutX="1.0" layoutY="75.0" prefHeight="75.0" prefWidth="1050.0">
+         <children>
+            <Label text="About">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Pane layoutY="139.0" prefHeight="661.0" prefWidth="1050.0">
+         <children>
+            <Label layoutX="10.0" prefHeight="36.0" prefWidth="912.0" text="Welcome to MyFuel, your number one source for home heating and">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="80.0" prefHeight="36.0" prefWidth="912.0" text="emphasis on convenience, efficiency, simplicity. Founded in 2020 by">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="120.0" prefHeight="36.0" prefWidth="912.0" text="Saar Victor, MyFuel has come a long way from its beginnings in">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="200.0" prefHeight="36.0" prefWidth="774.0" text="products drove him to start his own business.">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="240.0" prefHeight="36.0" prefWidth="934.0" text="We hope you enjoy our products as much as we enjoy offering them to you.">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="280.0" prefHeight="36.0" prefWidth="903.0" text="If you have any questions or comments, please don't hesitate to contact us.">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="587.0" text="Sincerely, MyFuel Team.">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="40.0" prefHeight="36.0" prefWidth="873.0" text="vehicle's fuel. We're dedicated to providing you the very best fuel, with an">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="160.0" prefHeight="36.0" prefWidth="958.0" text="Nahariyya. When Saar first started out, his passion for necessary fueling">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Pane layoutX="14.0" layoutY="364.0" prefHeight="189.0" prefWidth="481.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" layoutY="58.0" prefHeight="45.0" prefWidth="138.0" style="-fx-background-color: LIGHTSLATEGRAY;">
+                     <children>
+                        <ImageView>
+                           <image>
+                              <Image url="@../Images/eylon%20(1).jpg" />
+                           </image>
+                        </ImageView>
+                        <VBox>
+                           <children>
+                              <Label text="Eylon" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="10.0" text="Python Developer" textFill="WHITE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="159.0" prefHeight="45.0" prefWidth="138.0" style="-fx-background-color: LIGHTSLATEGRAY;">
+                     <children>
+                        <ImageView>
+                           <image>
+                              <Image url="@../Images/gal%20(1).jpg" />
+                           </image>
+                        </ImageView>
+                        <VBox>
+                           <children>
+                              <Label text="Gal" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="10.0" text="Java Developer" textFill="WHITE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="138.0" style="-fx-background-color: LIGHTSLATEGRAY;">
+                     <children>
+                        <ImageView>
+                           <image>
+                              <Image url="@../Images/saar%20(1).jpg" />
+                           </image>
+                        </ImageView>
+                        <VBox>
+                           <children>
+                              <Label text="Saar" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="10.0" text="Entrepreneur" textFill="WHITE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="159.0" layoutY="58.0" prefHeight="45.0" prefWidth="138.0" style="-fx-background-color: LIGHTSLATEGRAY;">
+                     <children>
+                        <ImageView>
+                           <image>
+                              <Image url="@../Images/shiraz%20(1).jpg" />
+                           </image>
+                        </ImageView>
+                        <VBox>
+                           <children>
+                              <Label text="Shiraz" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="10.0" text="Java Developer" textFill="WHITE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutY="118.0" prefHeight="45.0" prefWidth="138.0" style="-fx-background-color: LIGHTSLATEGRAY;">
+                     <children>
+                        <ImageView>
+                           <image>
+                              <Image url="@../Images/shoval%20(1).jpg" />
+                           </image>
+                        </ImageView>
+                        <VBox>
+                           <children>
+                              <Label text="Shoval" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="10.0" text="Tcl Developer" textFill="WHITE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </Pane>
+            <Label layoutX="10.0" layoutY="331.0" text="Team Involved:" underline="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <HBox layoutX="985.0" layoutY="5.0" prefHeight="24.0" prefWidth="27.0">
+         <children>
+            <Button fx:id="Minus" mnemonicParsing="false" onAction="#minimize" styleClass="minimizeExitBtn">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Minus.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust brightness="1.0" contrast="-1.0" />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="X" mnemonicParsing="false" onAction="#exit" styleClass="minimizeExitBtn">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/X.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust brightness="1.0" contrast="1.0" />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

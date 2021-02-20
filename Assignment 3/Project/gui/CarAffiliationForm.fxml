@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="MyPane" prefHeight="800.0" prefWidth="1050.0" stylesheets="@../styleCSS/HomePage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.CarRegistrationControllerClient">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1050.0">
+         <children>
+            <Label fx:id="txtClearAllFields" layoutX="29.0" layoutY="720.0" onMouseClicked="#clearAllFields" text="Clear all fields" textFill="#2573f0" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Button fx:id="btnBack" layoutX="27.0" layoutY="750.0" mnemonicParsing="false" onMouseClicked="#backFunction" prefHeight="30.0" prefWidth="160.0" style="-fx-border-radius: 3px; -fx-border-width: 0.7; -fx-border-color: BLACK;" text="Back">
+               <effect>
+                  <InnerShadow blurType="ONE_PASS_BOX" color="#7789999a" height="255.0" radius="127.0" width="255.0">
+                     <input>
+                        <InnerShadow choke="0.57" color="#ff000000" />
+                     </input>
+                  </InnerShadow>
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="1050.0" style="-fx-background-color: LIGHTSLATEGRAY;">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#faf9f9" height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <children>
+                  <Label fx:id="pathCarRegistration" layoutX="14.0" layoutY="21.0" text="System Operations -&gt; Car Addition &amp; Affiliation" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox alignment="CENTER" layoutY="75.0" prefHeight="75.0" prefWidth="1050.0">
+               <children>
+                  <Label text="Car Addition &amp; Affiliation">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Button fx:id="btnAddCar" layoutX="688.0" layoutY="750.0" mnemonicParsing="false" onMouseClicked="#addCar" prefHeight="30.0" prefWidth="160.0" style="-fx-border-radius: 3px; -fx-border-width: 0.7; -fx-border-color: BLACK;" text="Add Another Car">
+               <effect>
+                  <InnerShadow blurType="ONE_PASS_BOX" color="#7789999a" height="255.0" radius="127.0" width="255.0">
+                     <input>
+                        <InnerShadow choke="0.57" color="#ff000000" />
+                     </input>
+                  </InnerShadow>
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnFinish" layoutX="865.0" layoutY="750.0" mnemonicParsing="false" onMouseClicked="#carFinish" prefHeight="30.0" prefWidth="160.0" style="-fx-border-radius: 3px; -fx-border-width: 0.7; -fx-border-color: BLACK;" text="Finish">
+               <effect>
+                  <InnerShadow blurType="ONE_PASS_BOX" color="#7789999a" height="255.0" radius="127.0" width="255.0">
+                     <input>
+                        <InnerShadow choke="0.57" color="#ff000000" />
+                     </input>
+                  </InnerShadow>
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Pane layoutY="168.0" prefHeight="551.0" prefWidth="1050.0">
+               <children>
+                  <Label layoutX="20.0" text="*" textFill="RED">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="30.0" text="Customer's ID: ">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="customerID" layoutX="220.0" onKeyTyped="#limit" prefHeight="26.0" prefWidth="185.0" />
+                  <Label layoutX="20.0" layoutY="60.0" text="*" textFill="RED">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="30.0" layoutY="60.0" text="License Plate Number:">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="licensePlateNumber" layoutX="220.0" layoutY="60.0" onKeyTyped="#limit" prefHeight="26.0" prefWidth="185.0" />
+                  <Label layoutX="20.0" layoutY="120.0" text="*" textFill="RED">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="30.0" layoutY="120.0" text="Vehicle Type:">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="carRadiobtn" layoutX="220.0" layoutY="120.0" mnemonicParsing="false" onMouseClicked="#changeFuelTypeToCar" text="Car">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="vehicle" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="scooterRadiobtn" layoutX="300.0" layoutY="120.0" mnemonicParsing="false" onMouseClicked="#changeFuelTypeToScooter" text="Scooter" toggleGroup="$vehicle">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <Label layoutX="20.0" layoutY="180.0" text="*" textFill="RED">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="30.0" layoutY="180.0" text="Fuel Type:">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cmbxFuelType" layoutX="220.0" layoutY="180.0" prefWidth="150.0" promptText="Choose one" style="-fx-border-radius: 3px; -fx-border-image-width: 0.7; -fx-border-color: BLACK;">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" color="#77899999" height="255.0" radius="127.0" width="255.0">
+                           <input>
+                              <InnerShadow choke="0.57" color="#ff000000" />
+                           </input>
+                        </InnerShadow>
+                     </effect>
+                  </ComboBox>
+                  <Label fx:id="txtErrorCustomerID" layoutX="440.0" layoutY="5.0" prefHeight="17.0" prefWidth="287.0" textFill="RED" />
+                  <Label fx:id="txtErrorLicensePlateNumber" layoutX="440.0" layoutY="60.0" prefHeight="17.0" prefWidth="287.0" textFill="RED" />
+                  <Label fx:id="txtErrorVehicleType" layoutX="440.0" layoutY="120.0" prefHeight="17.0" prefWidth="287.0" textFill="RED" />
+                  <Label fx:id="txtErrorFuelType" layoutX="440.0" layoutY="180.0" prefHeight="17.0" prefWidth="287.0" textFill="RED" />
+                  <TableView fx:id="tableVehicles" layoutX="31.0" layoutY="315.0" prefHeight="200.0" prefWidth="983.0">
+                    <columns>
+                      <TableColumn fx:id="clmnFirstName" prefWidth="120.79998207092285" text="First Name" />
+                      <TableColumn fx:id="cmnLastName" prefWidth="158.39996337890625" text="Last Name" />
+                        <TableColumn fx:id="clmnCustomerID" prefWidth="212.00009155273438" text="Customer ID" />
+                        <TableColumn fx:id="clmnLicenseNumber" prefWidth="156.79998779296875" text="License Number" />
+                        <TableColumn fx:id="clmnVheicleType" prefWidth="163.20001220703125" text="Vehicle Type" />
+                        <TableColumn fx:id="clmnFuelType" prefWidth="166.4000244140625" text="Fuel Type" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="30.0" layoutY="276.0" text="Registered Vehicles:">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <HBox layoutX="985.0" layoutY="5.0" prefHeight="24.0" prefWidth="27.0">
+               <children>
+                  <Button fx:id="Minus" mnemonicParsing="false" onAction="#minimize" styleClass="minimizeExitBtn">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Minus.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" contrast="-1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="X" mnemonicParsing="false" onAction="#exit" styleClass="minimizeExitBtn">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/X.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" contrast="1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

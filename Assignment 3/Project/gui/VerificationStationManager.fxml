@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="MyPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1050.0" stylesheets="@../styleCSS/HomePage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.VarificationController">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="1050.0" style="-fx-background-color: LIGHTSLATEGRAY;">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" color="#faf9f9" height="10.0" radius="4.5" width="10.0" />
+         </effect>
+         <children>
+            <Label layoutX="14.0" layoutY="21.0" text="System Operations -&gt; Verification" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="myTable" layoutX="10.0" layoutY="167.0" onMouseClicked="#setTextIfRowSelected" onSort="#setTextIfRowSelected" prefHeight="411.0" prefWidth="1030.0">
+         <columns>
+            <TableColumn fx:id="colRequestID" editable="false" minWidth="55.0" prefWidth="67.19995403289795" text="Request ID" />
+            <TableColumn fx:id="colEmployeeID" editable="false" minWidth="55.20001220703125" prefWidth="81.5999755859375" text="Employee ID" />
+            <TableColumn fx:id="colName" editable="false" minWidth="86.0" prefWidth="96.800048828125" text="Name" />
+            <TableColumn fx:id="colRole" editable="false" minWidth="87.0" prefWidth="122.4000244140625" text="Role" />
+            <TableColumn fx:id="colOrganizationalAffiliation" editable="false" minWidth="55.0" prefWidth="146.40005493164062" text="OrganizationalAffiliation" />
+            <TableColumn fx:id="colStation" editable="false" minWidth="55.0" prefWidth="93.5999755859375" text="Station" />
+            <TableColumn fx:id="colStatus" editable="false" minWidth="75.19989013671875" prefWidth="154.4000244140625" text="Status" />
+            <TableColumn fx:id="colDescription" editable="false" minWidth="98.39996337890625" prefWidth="263.199951171875" text="Description" />
+         </columns>
+      </TableView>
+      <Label layoutX="64.0" layoutY="655.0" text="* Select ID from the table above." />
+      <Label fx:id="RequestIDLable" layoutX="389.0" layoutY="622.0" prefHeight="17.0" prefWidth="243.0" textFill="RED" />
+      <Button fx:id="Back" layoutX="27.0" layoutY="750.0" mnemonicParsing="false" onAction="#Back" prefHeight="30.0" prefWidth="160.0" style="-fx-border-radius: 3px; -fx-border-width: 0.7; -fx-border-color: BLACK;" text="Back">
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" color="#7789999a" height="255.0" radius="127.0" width="255.0">
+               <input>
+                  <InnerShadow choke="0.57" color="#ff000000" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="Update" layoutX="865.0" layoutY="750.0" mnemonicParsing="false" onAction="#Approve" prefHeight="30.0" prefWidth="160.0" style="-fx-border-radius: 3px; -fx-border-width: 0.7; -fx-border-color: BLACK;" text="Approve">
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" color="#7789999a" height="255.0" radius="127.0" width="255.0">
+               <input>
+                  <InnerShadow choke="0.57" color="#ff000000" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="Remove" layoutX="688.0" layoutY="750.0" mnemonicParsing="false" onAction="#Remove" prefHeight="30.0" prefWidth="160.0" style="-fx-border-radius: 3px; -fx-border-width: 0.7; -fx-border-color: BLACK;" text="Remove">
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" color="#7789999a" height="255.0" radius="127.0" width="255.0">
+               <input>
+                  <InnerShadow choke="0.57" color="#ff000000" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="63.0" layoutY="615.0" prefHeight="26.0" prefWidth="150.0" text="Request ID:">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <padding>
+            <Insets bottom="15.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="RequestID" alignment="TOP_LEFT" layoutX="242.0" layoutY="615.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#onlyNumbers" prefHeight="30.0" prefWidth="130.0" />
+      <VBox alignment="CENTER" layoutY="75.0" prefHeight="75.0" prefWidth="1050.0">
+         <children>
+            <Label text="Verification">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <HBox layoutX="985.0" layoutY="5.0" prefHeight="24.0" prefWidth="27.0">
+         <children>
+            <Button fx:id="Minus" mnemonicParsing="false" onAction="#minimize" styleClass="minimizeExitBtn">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Minus.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust brightness="1.0" contrast="-1.0" />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="X" mnemonicParsing="false" onAction="#exit" styleClass="minimizeExitBtn">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/X.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust brightness="1.0" contrast="1.0" />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</Pane>

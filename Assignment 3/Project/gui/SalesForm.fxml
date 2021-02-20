@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="MyPane" prefHeight="800.0" prefWidth="1050.0" stylesheets="@../styleCSS/HomePage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.SaleControllerClient">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1050.0">
+         <children>
+            <Button fx:id="btnBack" layoutX="27.0" layoutY="750.0" mnemonicParsing="false" onMouseClicked="#backClick" prefHeight="30.0" prefWidth="160.0" style="-fx-border-radius: 3px; -fx-border-width: 0.7; -fx-border-color: BLACK;" text="Back">
+               <effect>
+                  <InnerShadow blurType="ONE_PASS_BOX" color="#7789999a" height="255.0" radius="127.0" width="255.0">
+                     <input>
+                        <InnerShadow choke="0.57" color="#ff000000" />
+                     </input>
+                  </InnerShadow>
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblClear" layoutX="29.0" layoutY="720.0" onMouseClicked="#clearClick" text="Clear all fields" textFill="#2573f0" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAddSale" layoutX="865.0" layoutY="750.0" mnemonicParsing="false" onMouseClicked="#createNewSaleClick" prefHeight="30.0" prefWidth="160.0" style="-fx-border-radius: 3px; -fx-border-width: 0.7; -fx-border-color: BLACK;" text="Create New Sale">
+               <effect>
+                  <InnerShadow blurType="ONE_PASS_BOX" color="#7789999a" height="255.0" radius="127.0" width="255.0">
+                     <input>
+                        <InnerShadow choke="0.57" color="#ff000000" />
+                     </input>
+                  </InnerShadow>
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="1050.0" style="-fx-background-color: LIGHTSLATEGRAY;">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#faf9f9" height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <children>
+                  <Label fx:id="lblNavigationBar" layoutX="14.0" layoutY="21.0" prefHeight="27.0" prefWidth="937.0" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox alignment="CENTER" layoutX="-1.0" layoutY="75.0" prefHeight="75.0" prefWidth="1050.0">
+               <children>
+                  <Label text="Sales">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Pane layoutY="161.0" prefHeight="570.0" prefWidth="1050.0">
+               <children>
+                  <Label layoutX="32.0" layoutY="1.0" text="*" textFill="RED">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="32.0" layoutY="51.0" text="*" textFill="RED">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="32.0" layoutY="101.0" text="*" textFill="RED">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="42.0" layoutY="1.0" text="Sale Name:">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="42.0" layoutY="51.0" text="Discount:">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="42.0" layoutY="101.0" text="Sale Pattern:">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtSaleName" layoutX="172.0" layoutY="1.0" prefHeight="26.0" prefWidth="198.0" />
+                  <ComboBox fx:id="cmbPatterns" layoutX="172.0" layoutY="101.0" prefHeight="27.0" prefWidth="341.0" promptText="Choose one" style="-fx-border-radius: 3px; -fx-border-image-width: 0.7; -fx-border-color: BLACK;">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" color="#77899999" height="255.0" radius="127.0" width="255.0">
+                           <input>
+                              <InnerShadow choke="0.57" color="#ff000000" />
+                           </input>
+                        </InnerShadow>
+                     </effect>
+                  </ComboBox>
+                  <TextArea fx:id="txtSaleReason" layoutX="172.0" layoutY="151.0" prefHeight="67.0" prefWidth="341.0" />
+                  <Label fx:id="lblAddNewSalePattern" layoutX="550.0" layoutY="113.0" onMouseClicked="#addNewSalePatternClick" text="Add new sale pattern" textFill="#2573f0" underline="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="42.0" layoutY="151.0" text="Sale Reason:">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="32.0" layoutY="151.0" text="*" textFill="RED">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtDiscount" layoutX="172.0" layoutY="51.0" onKeyTyped="#limit" prefHeight="26.0" prefWidth="62.0" />
+                  <Label layoutX="243.0" layoutY="51.0" text="\%">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblErrorSaleName" layoutX="550.0" layoutY="7.0" prefHeight="17.0" prefWidth="475.0" textFill="RED" />
+                  <Label fx:id="lblErrorDiscount" layoutX="550.0" layoutY="56.0" prefHeight="17.0" prefWidth="475.0" textFill="RED" />
+                  <Label fx:id="lblErrorSalePattern" layoutX="550.0" layoutY="132.0" prefHeight="17.0" prefWidth="475.0" textFill="RED" />
+                  <Label fx:id="lblErrorSaleReason" layoutX="550.0" layoutY="175.0" prefHeight="17.0" prefWidth="475.0" textFill="RED" />
+                  <Label fx:id="lblNoSalePattern" layoutX="550.0" layoutY="99.0" prefHeight="17.0" prefWidth="475.0" />
+                  <ImageView fitHeight="292.0" fitWidth="388.0" layoutX="349.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/bigSale.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <HBox layoutX="985.0" layoutY="5.0" prefHeight="24.0" prefWidth="27.0">
+               <children>
+                  <Button fx:id="Minus" mnemonicParsing="false" onAction="#minimize" styleClass="minimizeExitBtn">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Minus.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" contrast="-1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="X" mnemonicParsing="false" onAction="#exit" styleClass="minimizeExitBtn">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/X.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" contrast="1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

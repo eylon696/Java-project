@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import validationtextfield.*?>
+
+<BorderPane fx:id="myPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@../styleCSS/ServerLogin.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ServerLoginController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="350.0" style="-fx-background-color: #2196f3;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="155.0" fitWidth="273.0" layoutX="42.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/LogoName.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #FFF;" BorderPane.alignment="CENTER">
+         <children>
+            <NumberTextFieldOnly fx:id="portTxt" layoutX="101.0" layoutY="221.0" promptText="Port Number" style="-fx-background-color: #FFF; -fx-border-color: #2196f3; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="buttonConnect" layoutX="94.0" layoutY="295.0" mnemonicParsing="false" onAction="#Connect" prefHeight="50.0" prefWidth="166.0" styleClass="btns" text="Connect" textFill="WHITE" />
+            <Text fill="#2196f3" layoutX="83.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Server Login">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Button layoutX="316.0" layoutY="3.0" mnemonicParsing="false" onAction="#exit" styleClass="minimizeExitBtn">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/X.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="285.0" layoutY="3.0" mnemonicParsing="false" onAction="#minimize" styleClass="minimizeExitBtn">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Minus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="116.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Group.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="73.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Server.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

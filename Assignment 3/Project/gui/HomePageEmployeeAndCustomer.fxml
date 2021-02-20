@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="MyPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.HomePageController">
+   <children>
+      <AnchorPane prefHeight="800.0" prefWidth="1350.0">
+         <children>
+            <VBox prefHeight="800.0" prefWidth="300.0" styleClass="sidebar">
+               <children>
+                  <HBox prefHeight="75.0" prefWidth="300.0">
+                     <children>
+                        <ImageView fitHeight="70.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/LogoName.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="65.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Fuel%20Icon.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" contrast="-1.0" />
+                           </effect>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="84.0" top="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #2196f3;;">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/userlogin.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                           <effect>
+                              <ColorAdjust brightness="1.0" contrast="-1.0" hue="1.0" />
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: #2196f3;">
+                     <children>
+                        <Label fx:id="UserName" alignment="CENTER" prefHeight="25.0" prefWidth="300.0" styleClass="labelColor" text="User Name" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: #2196f3;">
+                     <children>
+                        <Label fx:id="Role" alignment="CENTER" prefHeight="25.0" prefWidth="300.0" styleClass="labelColor" text="Role" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="300.0">
+                     <children>
+                        <Button fx:id="SearchIconButtton" mnemonicParsing="false" onAction="#Search" styleClass="btnsDash">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/Search.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="0.15" contrast="-1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextField fx:id="SearchText" prefHeight="25.0" prefWidth="258.0" promptText="Search" style="-fx-background-color: transparent;">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <effect>
+                              <ColorAdjust brightness="0.2" contrast="-1.0" />
+                           </effect>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="300.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <Button fx:id="Home" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#Home" prefHeight="55.0" prefWidth="300.0" styleClass="btnsDash" text="   Home" textFill="#dddbdb">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/home.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="0.15" contrast="-1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="300.0">
+                     <children>
+                        <Button fx:id="SystemOperations" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#SystemOperations" prefHeight="55.0" prefWidth="300.0" styleClass="btnsDash" text="   System Operations" textFill="#dddbdb">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/Menu.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="0.15" contrast="-1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="300.0">
+                     <children>
+                        <Button fx:id="HomeHeatingFuel" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#HomeHeatingFuel" prefHeight="55.0" prefWidth="300.0" styleClass="btnsDash" text="   Home Heating Fuel" textFill="#dddbdb">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/homeheating.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="0.15" contrast="-1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="300.0">
+                     <children>
+                        <Button fx:id="About" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#About" prefHeight="55.0" prefWidth="300.0" styleClass="btnsDash" text="   About" textFill="#dddbdb">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/AboutUs.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="0.15" contrast="-1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="300.0" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="300.0" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="300.0" />
+                  <Button fx:id="Logout" mnemonicParsing="false" onAction="#Logout" prefHeight="48.0" prefWidth="300.0" styleClass="buttonLogout" text="Logout">
+                     <VBox.margin>
+                        <Insets top="60.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox fx:id="MyVbox" layoutX="300.0" prefHeight="800.0" prefWidth="1050.0" styleClass="parent">
+               <children>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="1050.0" style="-fx-background-color: LIGHTSLATEGRAY;">
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" color="#faf9f9" height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                     <children>
+                        <Label layoutX="4.0" layoutY="22.0" prefHeight="27.0" prefWidth="749.0" text="Home" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox layoutX="985.0" layoutY="5.0" prefHeight="24.0" prefWidth="27.0">
+                           <children>
+                              <Button fx:id="Minus" mnemonicParsing="false" onAction="#minimize" styleClass="minimizeExitBtn">
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/Minus.png" />
+                                       </image>
+                                       <effect>
+                                          <ColorAdjust brightness="1.0" contrast="-1.0" />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="X" mnemonicParsing="false" onAction="#exit" styleClass="minimizeExitBtn">
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/X.png" />
+                                       </image>
+                                       <effect>
+                                          <ColorAdjust brightness="1.0" contrast="1.0" />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="262.0" fitWidth="1050.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../Images/cartoon-illustration-car-is-gas-station_82574-5376.jpg" />
+                     </image>
+                  </ImageView>
+                  <HBox />
+                  <VBox alignment="CENTER" prefHeight="457.0" prefWidth="1050.0">
+                     <children>
+                        <Label text="Welcome to MyFuel system!" textFill="#7c8184">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Thank you for using our new and improved application" textFill="#7c8184">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../styleCSS/decrote.css" />
+      <URL value="@../styleCSS/HomePage.css" />
+   </stylesheets>
+</Pane>

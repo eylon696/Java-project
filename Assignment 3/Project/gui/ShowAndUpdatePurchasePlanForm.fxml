@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="MyPane" prefHeight="800.0" prefWidth="1050.0" stylesheets="@../styleCSS/HomePage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.UpdatePurchasePlanControllerClient">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1050.0">
+         <children>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="1050.0" style="-fx-background-color: LIGHTSLATEGRAY;">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#faf9f9" height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <children>
+                  <Label layoutX="14.0" layoutY="21.0" text="System Operations -&gt; Show &amp; Update Purchase Plan" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox alignment="CENTER" layoutY="75.0" prefHeight="75.0" prefWidth="1050.0">
+               <children>
+                  <Label text="Show &amp; Update Purchase Plan">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Button fx:id="btnBack" layoutX="27.0" layoutY="750.0" mnemonicParsing="false" onMouseClicked="#backFunction" prefHeight="30.0" prefWidth="160.0" style="-fx-border-radius: 3px; -fx-border-width: 0.7; -fx-border-color: BLACK;" text="Back">
+               <effect>
+                  <InnerShadow blurType="ONE_PASS_BOX" color="#7789999a" height="255.0" radius="127.0" width="255.0">
+                     <input>
+                        <InnerShadow choke="0.57" color="#ff000000" />
+                     </input>
+                  </InnerShadow>
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUpdate" layoutX="865.0" layoutY="750.0" mnemonicParsing="false" onMouseClicked="#updateFunction" prefHeight="30.0" prefWidth="160.0" style="-fx-border-radius: 3px; -fx-border-width: 0.7; -fx-border-color: BLACK;" text="Update">
+               <effect>
+                  <InnerShadow blurType="ONE_PASS_BOX" color="#7789999a" height="255.0" radius="127.0" width="255.0">
+                     <input>
+                        <InnerShadow choke="0.57" color="#ff000000" />
+                     </input>
+                  </InnerShadow>
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="btnClear" layoutX="29.0" layoutY="720.0" onMouseClicked="#clearAllFields" text="Clear all fields" textFill="#2573f0" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Pane layoutY="146.0" prefHeight="560.0" prefWidth="1050.0">
+               <children>
+                  <ComboBox fx:id="cmbxGasCompany3" layoutX="180.0" layoutY="502.0" onMouseClicked="#cmbxGasCompany3Clicked" prefWidth="150.0" promptText="Choose one" style="-fx-border-radius: 3px; -fx-border-image-width: 0.7; -fx-border-color: BLACK;">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" color="#77899999" height="255.0" radius="127.0" width="255.0">
+                           <input>
+                              <InnerShadow choke="0.57" color="#ff000000" />
+                           </input>
+                        </InnerShadow>
+                     </effect>
+                  </ComboBox>
+                  <ComboBox fx:id="cmbxGasCompany2" layoutX="180.0" layoutY="457.0" onMouseClicked="#cmbxGasCompany2Clicked" prefWidth="150.0" promptText="Choose one" style="-fx-border-radius: 3px; -fx-border-image-width: 0.7; -fx-border-color: BLACK;">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" color="#77899999" height="255.0" radius="127.0" width="255.0">
+                           <input>
+                              <InnerShadow choke="0.57" color="#ff000000" />
+                           </input>
+                        </InnerShadow>
+                     </effect>
+                  </ComboBox>
+                  <ComboBox fx:id="cmbxGasCompany1" layoutX="180.0" layoutY="412.0" onMouseClicked="#cmbxGasCompany1Clicked" prefWidth="150.0" promptText="Choose one" style="-fx-border-radius: 3px; -fx-border-image-width: 0.7; -fx-border-color: BLACK;">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" color="#77899999" height="255.0" radius="127.0" width="255.0">
+                           <input>
+                              <InnerShadow choke="0.57" color="#ff000000" />
+                           </input>
+                        </InnerShadow>
+                     </effect>
+                  </ComboBox>
+                  <RadioButton fx:id="planTypeMultiple" layoutX="360.0" layoutY="367.0" mnemonicParsing="false" onMouseClicked="#setMultipleCmbx" text="Multiple">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="PlanType" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="planTypeExclusive" layoutX="260.0" layoutY="367.0" mnemonicParsing="false" onMouseClicked="#setExclusiveCmbx" text="Exclusive" toggleGroup="$PlanType">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="planTypeNone" layoutX="180.0" layoutY="367.0" mnemonicParsing="false" onMouseClicked="#setNoneCmbx" selected="true" text="None" toggleGroup="$PlanType">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <Label layoutX="30.0" layoutY="367.0" text="Plan Type:">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="30.0" layoutY="412.0" text="Gas Company 1:">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="30.0" layoutY="457.0" text="Gas Company 2:">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="30.0" layoutY="502.0" text="Gas Company 3:">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="txtErrorGasCompany" layoutX="459.0" layoutY="416.0" prefHeight="17.0" prefWidth="293.0" textFill="RED" />
+                  <TableView fx:id="tablePlans" layoutX="14.0" prefHeight="309.0" prefWidth="1023.0">
+                     <columns>
+                        <TableColumn fx:id="clmnFirstName" prefWidth="172.79998397827148" text="First Name" />
+                        <TableColumn fx:id="clmnLastName" prefWidth="147.1999969482422" text="Last Name" />
+                        <TableColumn fx:id="clmnCustomerID" prefWidth="151.20001220703125" text="Customer ID" />
+                        <TableColumn fx:id="clmnPlanType" minWidth="0.0" prefWidth="176.0" text="Plan Type" />
+                        <TableColumn fx:id="clmnGasCompany1" prefWidth="131.199951171875" text="Gas Company 1" />
+                        <TableColumn fx:id="clmnGasCompany2" prefWidth="117.5999755859375" text="Gas Company 2" />
+                        <TableColumn fx:id="clmnGasCompany3" prefWidth="125.60009765625" text="Gas Company 3" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="30.0" layoutY="322.0" text="Choose the inforamtion you want to update:">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <HBox layoutX="985.0" layoutY="5.0" prefHeight="24.0" prefWidth="27.0">
+               <children>
+                  <Button fx:id="Minus" mnemonicParsing="false" onAction="#minimize" styleClass="minimizeExitBtn">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Minus.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" contrast="-1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="X" mnemonicParsing="false" onAction="#exit" styleClass="minimizeExitBtn">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/X.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" contrast="1.0" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
