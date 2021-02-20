@@ -1,0 +1,40 @@
+.forgetBtn
+{
+    -fx-text-fill: a3a3a3;
+}
+.forgetBtn:hover
+{
+	-fx-text-fill: #2196f3;
+	-fx-underline: true;
+}
+
+.loginBtn
+{
+	-fx-background-color: #2196f3;
+	-fx-text-fill: #FFF;
+	-fx-background-radius: 3px;
+}
+.loginBtn:hover
+{
+	-fx-background-color: transparent;
+	-fx-text-fill: #2196f3;
+	-fx-border-color: #2196f3;
+	-fx-border-width: 1px;
+	-fx-border-style: solid;
+	-fx-background-radius: 3px;
+	-fx-border-radius: 3px;
+}
+.loginBtn:pressed
+{
+	-fx-background-color:  #42a5f5;
+    -fx-text-fill:  white;
+}
+
+.minimizeExitBtn
+{
+	-fx-background-color: transparent;
+}
+.minimizeExitBtn:pressed
+{
+	-fx-background-color:  #b3e5fc;
+}

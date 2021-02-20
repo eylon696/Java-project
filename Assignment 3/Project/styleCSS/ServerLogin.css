@@ -1,0 +1,30 @@
+.button
+{
+	-fx-font-weight: bold;
+	-fx-background-color: #2196f3;
+	-fx-font-size: 16;
+	-fx-text-fill: white;
+}
+
+.btns:hover
+{
+    -fx-background-color: white;
+    -fx-text-fill: #2196f3;
+    -fx-border-color: #2196f3;
+
+}
+
+.btns:pressed
+{
+	-fx-background-color:  #2196f3;
+    -fx-text-fill:  white;
+}
+
+.minimizeExitBtn
+{
+	-fx-background-color: transparent;
+}
+.minimizeExitBtn:pressed
+{
+	-fx-background-color:  #b3e5fc;
+}
